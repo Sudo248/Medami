@@ -1,0 +1,68 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id("dagger.hilt.android.plugin")
+    id('com.google.gms.google-services')
+}
+
+android {
+    compileSdk Config.compileSdk
+
+    defaultConfig {
+        minSdk Config.minSdk
+        targetSdk Config.targetSdk
+        versionCode Config.versionCode
+        versionName Config.versionName
+
+        testInstrumentationRunner Config.testInstrumentationRunner
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility sourceCompatibility
+        targetCompatibility targetCompatibility
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+kapt {
+    correctErrorTypes true
+}
+
+dependencies {
+
+    implementation( Dependencies.appUi )
+    implementation( Dependencies.testLibs )
+    // module
+    implementation project( Modules.domain )
+
+    // coroutine
+    implementation( Dependencies.COROUTINES_CORE )
+
+    // hilt
+    implementation( Dependencies.HILT_ANDROID )
+    kapt(Dependencies.KAPT_HILT)
+
+    // room
+    implementation( Dependencies.ROOM )
+    annotationProcessor( Dependencies.ANNOTATION_PROCESSOR )
+    kapt( Dependencies.KAPT_ROOM )
+    implementation( Dependencies.COROUTINES_ROOM )
+
+    // fire base
+    implementation platform( Dependencies.FIREBASE_PLATFORM )
+    implementation( Dependencies.FIREBASE_ANALYTICS )
+    implementation( Dependencies.FIREBASE_AUTH )
+    implementation( Dependencies.FIREBASE_STORE )
+    implementation( Dependencies.COROUTINE_FIREBASE )
+
+}
