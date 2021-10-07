@@ -2,7 +2,7 @@ package com.sudo.data.repositories.medicine
 
 import com.sudo.data.local.database.dao.MedamiDao
 import com.sudo.data.local.database.models.PrescriptionMedicineCrossPref
-import com.sudo.data.utils.*
+import com.sudo.data.mapper.*
 import com.sudo.domain.entities.Medicine
 import com.sudo.domain.entities.Notification
 import com.sudo.domain.entities.Prescription

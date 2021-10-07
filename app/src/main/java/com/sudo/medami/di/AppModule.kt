@@ -1,5 +1,8 @@
 package com.sudo.medami.di
 
+import com.sudo.data.remote.firebase.service.FirebaseService
+import com.sudo.data.repositories.user.UserRepositoryImplFB
+import com.sudo.domain.repositories.user.UserRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -10,9 +13,10 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object AppModule {
 
-//    @Fac
-
     @Provides
-    fun provideAddMedicineUseCase() = 1
+    @Singleton
+    fun provideUserRepository(
+        firebaseService: FirebaseService
+    ) = UserRepositoryImplFB(firebaseService) as UserRepository
 
 }

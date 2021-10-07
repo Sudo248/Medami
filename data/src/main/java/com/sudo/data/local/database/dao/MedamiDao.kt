@@ -64,7 +64,7 @@ interface MedamiDao {
 
     // Account
     @Query("SELECT * FROM account_table WHERE email_phone = :emailPhone LIMIT 1")
-    suspend fun getAccount(emailPhone: String): UserAccountDB
+    suspend fun getAccount(emailPhone: String): UserAccountDB?
 
     // User
     @Query("SELECT * FROM user_table WHERE user_id = :id LIMIT 1")

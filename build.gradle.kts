@@ -16,12 +16,6 @@ buildscript {
     }
 }
 
-//allprojects {
-//    repositories {
-//        google()
-//    }
-//}
-
 tasks {
     val clean by registering(Delete::class) {
         delete(buildDir)

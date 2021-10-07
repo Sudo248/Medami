@@ -71,4 +71,5 @@ object Dependencies {
 
     const val FIREBASE_STORE =
         "com.google.firebase:firebase-firestore-ktx:${Versions.FIREBASE_STORE}"
+
 }

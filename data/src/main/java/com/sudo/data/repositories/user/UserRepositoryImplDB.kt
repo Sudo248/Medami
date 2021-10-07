@@ -1,10 +1,10 @@
 package com.sudo.data.repositories.user
 
 import com.sudo.data.local.database.dao.MedamiDao
-import com.sudo.data.utils.toPrescription
-import com.sudo.data.utils.toUser
-import com.sudo.data.utils.toUserAccountDB
-import com.sudo.data.utils.toUserDB
+import com.sudo.data.mapper.toPrescription
+import com.sudo.data.mapper.toUser
+import com.sudo.data.mapper.toUserAccountDB
+import com.sudo.data.mapper.toUserDB
 import com.sudo.domain.entities.Prescription
 import com.sudo.domain.entities.User
 import com.sudo.domain.repositories.user.UserRepository
