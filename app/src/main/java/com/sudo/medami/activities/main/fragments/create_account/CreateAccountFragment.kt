@@ -1,22 +1,21 @@
-package com.sudo.medami.activities.main.fragments.sign_up
+package com.sudo.medami.activities.main.fragments.create_account
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.Navigation
 import com.sudo.medami.R
-import com.sudo.medami.databinding.FragmentSignUpBinding
+import com.sudo.medami.databinding.FragmentCreateAccountBinding
 
-class SignUp : Fragment() {
-    lateinit var binding: FragmentSignUpBinding
+class CreateAccountFragment : Fragment() {
+    lateinit var binding: FragmentCreateAccountBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = FragmentSignUpBinding.inflate(
+        binding = FragmentCreateAccountBinding.inflate(
             inflater,
             container,
             false
@@ -26,12 +25,6 @@ class SignUp : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        checkClickEvent(view)
-    }
 
-    private fun checkClickEvent(view: View) {
-        binding.btnSwitchToCreateAccount.setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_signUp_to_createAccountFragment)
-        }
     }
 }

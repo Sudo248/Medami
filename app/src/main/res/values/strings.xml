@@ -9,5 +9,7 @@
     <string name="sign_in_with_google">Sign in with Google</string>
     <string name="create_account">Create Account</string>
     <string name="next">Continue</string>
+    <string name="enter_user_name">Enter user name</string>
+    <string name="enter_password">Enter password</string>
 
 </resources>

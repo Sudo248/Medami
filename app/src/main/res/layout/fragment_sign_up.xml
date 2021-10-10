@@ -8,23 +8,28 @@
     tools:context=".activities.main.fragments.sign_up.SignUp">
 
     <com.hbb20.CountryCodePicker
+        android:id="@+id/country_code"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         />
     <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edt_phone_number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="number"
         android:hint="@string/your_number"/>
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_signIn_with_google"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/sign_in_with_google"/>
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_switch_to_create_account"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/create_account"/>
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_switch_to_sign_in"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/sign_in"
