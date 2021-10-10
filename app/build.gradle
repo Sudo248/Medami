@@ -32,6 +32,7 @@ android {
 
     buildFeatures{
         dataBinding true
+        viewBinding = true
     }
 
 }
@@ -53,4 +54,21 @@ dependencies {
     implementation( Dependencies.HILT_ANDROID )
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     kapt(Dependencies.KAPT_HILT)
+
+    //country code piker
+    implementation 'com.hbb20:ccp:2.3.1'
+
+    //navigation
+    // Kotlin
+    implementation("androidx.navigation:navigation-fragment-ktx:2.3.5")
+    implementation("androidx.navigation:navigation-ui-ktx:2.3.5")
+
+    // Feature module Support
+    implementation("androidx.navigation:navigation-dynamic-features-fragment:2.3.5")
+
+    // Testing Navigation
+    androidTestImplementation("androidx.navigation:navigation-testing:2.3.5")
+
+    // Jetpack Compose Integration
+    implementation("androidx.navigation:navigation-compose:2.4.0-alpha10")
 }

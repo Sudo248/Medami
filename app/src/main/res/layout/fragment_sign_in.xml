@@ -1,14 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingLeft="50dp"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.main.fragments.SignIn">
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activities.main.fragments.sign_in.SignIn">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <com.hbb20.CountryCodePicker
+        android:id="@+id/country_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <EditText
+        android:id="@+id/edt_phone_number"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
-
-</FrameLayout>
+        android:layout_height="wrap_content"
+        android:hint="@string/your_number"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_signIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_in"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_switch_to_signUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_up"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_forgot_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/forgot_password"
+        android:textStyle="italic"
+        android:background="@drawable/flag_transparent"/>
+</LinearLayout>
