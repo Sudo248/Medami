@@ -1,8 +1,0 @@
-{
-    "name": "socket-chat-medami",
-    "version": "0.0.1",
-    "description": "Medami chat",
-    "dependencies": {
-        "express": "^4.17.1"
-    }
-}
