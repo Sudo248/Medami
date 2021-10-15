@@ -2,10 +2,10 @@
   "name": "medami-server",
   "version": "1.0.0",
   "description": "use mysql database to store data of user and socketio to chat realtime",
-  "main": "server.js",
+  "main": "./server/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "nodemon ./server/server.js"
   },
   "author": "duonglh@sudo",
   "license": "ISC",
@@ -13,6 +13,7 @@
     "express": "^4.17.1",
     "fs": "^0.0.1-security",
     "http": "^0.0.1-security",
+    "moment": "^2.29.1",
     "mysql2": "^2.3.0",
     "path": "^0.12.7",
     "socket.io": "^4.2.0"
